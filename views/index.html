@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="https://doshare.me/favicon.ico" />
+        <link rel="icon" href="https://doshare.me//favicon.ico" />
+        <title>DoShare - Waitlist</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
+            integrity="sha512-B46MVOJpI6RBsdcU307elYeStF2JKT87SsHZfRSkjVi4/iZ3912zXi45X5/CBr/GbCyLx6M1GQtTKYRd52Jxgw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css"
+            integrity="sha512-/r+0SvLvMMSIf41xiuy19aNkXxI+3zb/BN8K9lnDDWI09VM0dwgTMzK7Qi5vv5macJ3VH4XZXr60ip7v13QnmQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css"
+            integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body data-bs-theme="dark">
+        <main
+            class="vh-100 d-flex align-items-center justify-content-center flex-column custom-container"
+        >
+            <h1 class="mt-auto display-4 fw-bold mb-3">
+                Good things come <br />
+                to those
+                <span class="text-decoration-underline fst-italic">
+                    who wait </span
+                >.
+            </h1>
+            <p class="text-center custom-transparent">
+                Be part of the excitement! <br />
+                Join our waitlist for exclusive launch updates and notifications
+            </p>
+            <form
+                action="/"
+                method="POST"
+                class="custom-form custom-transparent"
+            >
+                <div class="border rounded p-2 d-flex">
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="form-control d-block border-0 custom-input"
+                        required
+                        placeholder="example@mail.com"
+                    />
+                    <button
+                        type="submit"
+                        class="d-block btn btn-outline-secondary custom-btn"
+                    >
+                        Join Waitlist
+                    </button>
+                </div>
+            </form>
+
+            <footer class="mt-auto mx-auto">
+                <p class="mb-3 text-center custom-transparent">
+                    <a href="" class="text-reset text-decoration-none">
+                        <span class="fa-brands fa-facebook-square"></span>
+                    </a>
+                    <a href="" class="text-reset text-decoration-none">
+                        <span class="fa-brands fa-instagram mx-3"></span>
+                    </a>
+                    <a href="" class="text-reset text-decoration-none">
+                        <span class="fa-brands fa-twitter"></span
+                    ></a>
+                    <a href="" class="text-reset text-decoration-none">
+                        <span class="fa-brands fa-linkedin mx-3"></span>
+                    </a>
+                    <a href="" class="text-reset text-decoration-none">
+                        <span class="fa-brands fa-github"></span>
+                    </a>
+                </p>
+                <p class="text-secondary custom-transparent">
+                    Copyright &copy; 2024
+                    <a href="https://doshare.me" target="_blank">DoShare.me</a>
+                </p>
+            </footer>
+
+            <!-- Success Toast -->
+            <% if(data.email){ %>
+            <div
+                class="toast position-fixed top-0 end-0 m-1 show"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+            >
+                <div class="toast-header text-bg-primary">
+                    <small class="display-6 me-2 text-light">
+                        <span class="fa fa-check-circle"></span>
+                    </small>
+                    <strong class="me-auto"
+                        >Email successfully submitted.</strong
+                    >
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="toast"
+                        aria-label="Close"
+                    ></button>
+                </div>
+            </div>
+            <% } %>
+
+            <!-- Error Toast -->
+            <% if(data.errorMsg){ %>
+            <div
+                class="toast position-fixed top-0 end-0 m-1 show"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+            >
+                <div class="toast-header text-bg-danger">
+                    <small class="display-6 me-2 text-light">
+                        <span class="fa fa-times-circle"></span>
+                    </small>
+                    <strong class="me-auto"><%= data.errorMsg %></strong>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="toast"
+                        aria-label="Close"
+                    ></button>
+                </div>
+            </div>
+            <% } %>
+        </main>
+
+        <!-- BootstrapJS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"
+        ></script>
+        <script src="/js/anime.min.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

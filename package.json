@@ -1,0 +1,20 @@
+{
+  "name": "waitlist",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "compression": "^1.7.4",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0"
+  },
+  "scripts": {
+    "dev": "bun --watch index.js",
+    "start": "NODE_ENV=production bun index.js"
+  },
+  "keywords": [],
+  "author": "Yinka Enoch Adedokun <adedokunyinkaenoch@gmail.com> (https://github.com/yinkaenoch)",
+  "license": "ISC",
+  "description": ""
+}

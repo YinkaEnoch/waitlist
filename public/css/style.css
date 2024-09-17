@@ -1,0 +1,49 @@
+.custom-transparent {
+    background: transparent;
+    backdrop-filter: blur(7px);
+    z-index: 999;
+}
+
+.custom-form {
+    width: 90%;
+}
+
+.custom-input {
+    color: var(--bs-gray-600);
+    transition: all 0.2s ease;
+}
+
+::placeholder {
+    color: var(--bs-gray-600) !important;
+    transition: all 0.2s ease;
+}
+
+.custom-input:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.custom-btn {
+    flex-basis: 35%;
+}
+
+/* MEDIUM */
+@media screen and (min-width: 768px) {
+    .custom-form {
+        width: 70%;
+    }
+}
+
+/* LARGE */
+@media screen and (min-width: 992px) {
+    .custom-form {
+        width: 50%;
+    }
+}
+
+/* EXTRA LARGE */
+@media screen and (min-width: 1200px) {
+    .custom-form {
+        width: 40%;
+    }
+}
